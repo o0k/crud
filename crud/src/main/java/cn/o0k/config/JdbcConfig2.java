@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 
-@Configuration  // spring 把它当成Xml配置文件来看
+// @Configuration  // spring 把它当成Xml配置文件来看
 // @PropertySource("classpath:jdbc.properties")
 // @EnableConfigurationProperties(JdbcProperties.class)  // 使用配置属性
 public class JdbcConfig2 {

@@ -2,6 +2,7 @@ package cn.o0k.controller;
 
 import cn.o0k.dao.UserMapper;
 import cn.o0k.pojo.User;
+import cn.o0k.service.O0kService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
@@ -10,25 +11,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.sql.DataSource;
 
 @Controller
-//@my
 public class O0kController {
     @Autowired
     private DataSource dataSource;
 
-    // @Autowired
-    // private UserMapper userMapper;
+    @Autowired
+    private O0kService o0kService;
 
 
 
 
-    @RequestMapping("o0k")
     // @RequestBody
-    @Transactional
+    // @Transactional
     // @RequestParam
 
+    @RequestMapping("o0k")
     public String mm(){
 
+        o0kService.mm();
+
         System.out.println("张澎");
+        System.out.println(dataSource);
 
         // User user = userMapper.selectByPrimaryKey(1);
         System.out.println("fffff");

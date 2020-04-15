@@ -1,4 +1,4 @@
-package cn.base;
+package cn.Basic_knowledge;
 
 public class ThreadTest {
 

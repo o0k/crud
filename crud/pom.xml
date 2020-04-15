@@ -68,10 +68,11 @@
     <!--mapper.xml 编译的问题-->
 
 
-
     <!--  maven里面有了spring-boot插件  -->
     <build>
+
         <resources>
+            <!--识别mapper.xml用-->
             <resource>
                 <directory>src/main/resources</directory>
                 <includes>
@@ -79,6 +80,7 @@
                 </includes>
             </resource>
         </resources>
+
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
