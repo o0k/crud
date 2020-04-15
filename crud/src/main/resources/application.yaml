@@ -1,0 +1,15 @@
+spring:
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /WEB-INF/view/
+server:
+  servlet:
+    jsp:
+      init-parameters:
+        development: true
+jdbc:
+  url: jdbc:mysql://127.0.0.1:3306/eesy
+  driverClassName: com.mysql.jdbc.Driver
+  username: root
+  password: root

@@ -16,7 +16,7 @@
 </script>
 <body>
 
-<input type="text" value="张5澎" id="name">
+<input type="text" value="张澎" id="name">
 <input type="text" value="张澎" id="name2">
 <div id="divId" >
     <span>span2</span>
