@@ -33,10 +33,6 @@ public class O0kController {
         System.out.println("张澎");
         System.out.println(dataSource);
 
-        // User user = userMapper.selectByPrimaryKey(1);
-        System.out.println("fffff");
-        // System.out.println(user);
-
         return "zz";
     }
 }

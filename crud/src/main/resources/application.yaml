@@ -12,3 +12,6 @@ jdbc:
   driverClassName: com.mysql.jdbc.Driver
   username: root
   password: root
+mybatis:
+  mapper-locations: classpath*:mapper/**/*.xml
+  type-aliases-package: cn.o0k.pojo
