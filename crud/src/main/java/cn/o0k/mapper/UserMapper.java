@@ -1,4 +1,4 @@
-package cn.o0k.dao;
+package cn.o0k.mapper;
 
 import cn.o0k.pojo.User;
 import org.apache.ibatis.annotations.Mapper;
@@ -14,7 +14,7 @@ public interface UserMapper {
 
     int insertSelective(User record);
 
-    User selectByPrimaryKey(@Param Integer id);
+    User selectByPrimaryKey(Integer id);
 
     int updateByPrimaryKeySelective(User record);
 

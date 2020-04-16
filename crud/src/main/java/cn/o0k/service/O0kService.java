@@ -1,6 +1,6 @@
 package cn.o0k.service;
 
-import cn.o0k.dao.UserMapper;
+import cn.o0k.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

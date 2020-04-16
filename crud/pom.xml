@@ -74,7 +74,7 @@
         <resources>
             <!--识别mapper.xml用-->
             <resource>
-                <directory>src/main/resources</directory>
+                <directory>src/main/java</directory>
                 <includes>
                     <include>**/*.xml</include>
                 </includes>

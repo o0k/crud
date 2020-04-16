@@ -8,10 +8,10 @@ server:
       init-parameters:
         development: true
 jdbc:
-  url: jdbc:mysql://127.0.0.1:3306/eesy
+  url: jdbc:mysql://127.0.0.1:3306/zhp
   driverClassName: com.mysql.jdbc.Driver
   username: root
   password: root
 mybatis:
-  mapper-locations: classpath*:mapper/**/*.xml
+  mapper-locations: classpath*:cn.o0k.mapper/**/*.xml
   type-aliases-package: cn.o0k.pojo
