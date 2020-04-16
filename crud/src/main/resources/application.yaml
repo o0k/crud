@@ -2,6 +2,7 @@ spring:
   mvc:
     view:
       suffix: .jsp
+      prefix: /WEB-INF/view/
 server:
   servlet:
     jsp:

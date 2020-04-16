@@ -1,5 +1,6 @@
 package cn.o0k.controller;
 
+import cn.o0k.pojo.User;
 import cn.o0k.service.O0kService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,11 +26,11 @@ public class O0kController {
     @RequestMapping("o0k")
     public String mm(){
 
-        o0kService.mm();
+        User user = o0kService.mm();
 
         System.out.println("张澎");
         System.out.println(dataSource);
 
-        return "zz";
+        return "toBack";
     }
 }
