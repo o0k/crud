@@ -9,7 +9,7 @@ server:
       init-parameters:
         development: true
 jdbc:
-  url: jdbc:mysql://127.0.0.1:3306/zhp
+  url: jdbc:mysql://127.0.0.1:3306/mybatis
   driverClassName: com.mysql.jdbc.Driver
   username: root
   password: root

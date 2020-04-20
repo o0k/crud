@@ -3,6 +3,7 @@
 <head>
     <title>Success</title>
 </head>
+    <script></script>
 <body>
     <H1>成功的一笔</H1>
 </body>
