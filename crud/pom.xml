@@ -67,11 +67,8 @@
     </dependencies>
 
     <!--mapper.xml 编译的问题-->
-
-
     <!--  maven里面有了spring-boot插件  -->
     <build>
-
         <resources>
             <!--识别mapper.xml用-->
             <resource>
@@ -80,18 +77,26 @@
                     <include>**/*.xml</include>
                 </includes>
             </resource>
+            <!--Linux下访问jsp问题-->
+            <resource>
+                <directory>src/main/webapp</directory>
+                <targetPath>META-INF/resources</targetPath>
+                <includes>
+                    <include>**/**</include>
+                </includes>
+            </resource>
         </resources>
 
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>1.4.2.RELEASE</version>
                 <configuration>
                     <fork>true</fork>
                 </configuration>
             </plugin>
         </plugins>
-        <!--提交test-->
     </build>
 
 </project>
