@@ -16,9 +16,6 @@ public class O0kController {
     @Autowired
     private O0kService o0kService;
 
-
-
-
     // @RequestBody
     // @Transactional
     // @RequestParam

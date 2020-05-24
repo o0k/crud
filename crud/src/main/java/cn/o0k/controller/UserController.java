@@ -16,7 +16,6 @@ public class UserController {
 // userAdd
     @Autowired
     private UserMapper userMapper;
-
 //    @RequestMapping("/add")
 //    public User mm() {
 //        System.out.println("★★★★★");
@@ -33,8 +32,6 @@ public class UserController {
     private String list(Model model) {
 
         User user = userMapper.selectByPrimaryKey(2);
-
-
         model.addAttribute("user", user);
         // list.jsp + model = ModelAndView
         return "list";// WEB-INF/jsp/"list".jsp

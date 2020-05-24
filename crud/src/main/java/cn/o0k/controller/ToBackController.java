@@ -14,13 +14,13 @@ public class ToBackController {
         userName=request.getParameter("userName");
         passWord=request.getParameter("pass");
 
-        if(userName.equals("linyi") && passWord.equals("123456")){
+        //if(userName.equals("linyi") && passWord.equals("123456")){
 
-            return "success";
-        }else{
-            System.out.println("hello world");
-            return "error";
-        }
+            return "success";}
+        // }else{
+        //     System.out.println("hello world");
+        //     return "error";
+        // }
 
-    }
+   // }
 }

@@ -16,6 +16,12 @@
         <relativePath/>
     </parent>
     <dependencies>
+        <!--log4j-->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.11.1</version>
+        </dependency>
         <!--mvc-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -26,6 +32,11 @@
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
+        </dependency>
+        <!--jsp页面跳转的问题，先引入进来-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
         </dependency>
 
         <!--mybatis-->

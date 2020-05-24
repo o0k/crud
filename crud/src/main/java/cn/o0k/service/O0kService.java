@@ -19,5 +19,4 @@ public class O0kService {
 
         return user;
     }
-
 }
