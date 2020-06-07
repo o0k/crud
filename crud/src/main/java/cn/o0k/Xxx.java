@@ -9,4 +9,6 @@ public class Xxx {
     public static void main(String[] args) {
         SpringApplication.run(Xxx.class);
     }
+
+    // test ignore 2020年6月7日 星期日
 }

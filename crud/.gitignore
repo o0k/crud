@@ -1,0 +1,7 @@
+.idea/
+.gitignore
+src/main/resources/static/abc/
+src/main/webapp/META-INF/
+src/main/webapp/img/
+target/
+/.idea/
