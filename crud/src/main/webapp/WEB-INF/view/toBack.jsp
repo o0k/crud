@@ -8,24 +8,16 @@
 <h4>1.helloworld2</h4>
 <hr>
 <input type="button" value="提交" οnClick="window.location.href='ajax.jsp';"/><br>
-
 <a href="${pageContext.request.contextPath}/WEB-INF/view/ajax.jsp">go to ajax.jsp</a>
-
-
-
 <input type="button" onclick="mm()" value="跳转">
 <script>
     function mm() {
         alert("马上跳转！！！")
-        <jsp:forward page ="/WEB-INF/view/ajax.jsp" />
+
         alert("跳转完成！！！")
     }
 </script>
-
-
-
 <hr>
-
 <form action="helloworld2">
     用户名：<input name="userName" />
     密  码：<input name="pass" />

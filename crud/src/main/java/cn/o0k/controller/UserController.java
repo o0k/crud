@@ -13,14 +13,14 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 @RequestMapping("user")
 public class UserController {
-// userAdd
+    // userAdd
     @Autowired
     private UserMapper userMapper;
-//    @RequestMapping("/add")
-//    public User mm() {
-//        System.out.println("★★★★★");
-//        return new User();
-//    }
+    //    @RequestMapping("/add")
+    //    public User mm() {
+    //        System.out.println("★★★★★");
+    //        return new User();
+    //    }
 
     @RequestMapping("/add")
     public String add(HttpServletRequest request){
