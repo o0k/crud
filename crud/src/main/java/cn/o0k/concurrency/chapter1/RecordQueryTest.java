@@ -15,6 +15,9 @@ public class RecordQueryTest {
         String sql = "select * from user";
         RowHandlerImpl rowHandler = new RowHandlerImpl();
 
+        // test commit not push
+
+
         List<User> list = (List<User>) rq.query(rowHandler, sql);
         for (User user : list) {
             System.out.println(user);
