@@ -43,6 +43,7 @@ public class JdbcConfig2 {
      * spring来掉, spring来传这个参数
      */
     /*
+
     @Bean
     public DataSource getDataSource(JdbcProperties prop) {  // spring的注入方式,谁调用,谁给我传  spring调用.
         DruidDataSource dataSource = new DruidDataSource();
