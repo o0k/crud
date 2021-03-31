@@ -12,10 +12,11 @@
 <input type="button" onclick="mm()" value="跳转">
 <script>
     function mm() {
-        alert("马上跳转！！！")
-
-        alert("跳转完成！！！")
+        // 数组
+        let x = [1,2,4];
+        alert(x[2]);
     }
+
 </script>
 <hr>
 <form action="helloworld2">

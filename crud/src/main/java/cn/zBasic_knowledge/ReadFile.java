@@ -18,4 +18,6 @@ public class ReadFile {
     //     boolean mkdir = file.mkdir();
     //     System.out.println(mkdir);
     // }
+
+    int a;
 }
