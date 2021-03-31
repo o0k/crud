@@ -16,7 +16,7 @@ public class RecordQueryTest {
         RowHandlerImpl rowHandler = new RowHandlerImpl();
 
         // test commit not push
-
+        // test git 2021年3月31日
 
         List<User> list = (List<User>) rq.query(rowHandler, sql);
         for (User user : list) {
