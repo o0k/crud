@@ -5,9 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
-public class Xxx {
+public class Start {
     public static void main(String[] args) {
-        SpringApplication.run(Xxx.class);
+        SpringApplication.run(Start.class);
     }
 
     // test ignore 2020年6月7日 星期日
@@ -15,4 +15,6 @@ public class Xxx {
     // 2020年6月11日
 
     // test ignore 2020年6月7日 星期日
+
+    // test commit
 }
