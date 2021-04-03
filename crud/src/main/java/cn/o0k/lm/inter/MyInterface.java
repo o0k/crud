@@ -43,15 +43,15 @@ public interface MyInterface {
     /**
      * 私有方法
      */
-    private void privateMethod() {
-        System.out.println("私有方法 privateMethod() ");
-    }
+    // private void privateMethod() {
+    //     System.out.println("私有方法 privateMethod() ");
+    // }
     /**
      * 私有 静态 方法
      */
-    private static void priStatMethod(){
-        System.out.println("priStatMethod()");
-    }
+    // private static void priStatMethod(){
+    //     System.out.println("priStatMethod()");
+    // }
     /**
      * 默认方法,可以调用,私有的静态方法 和 非静态方法.
      * 静态方法 只能调用私有的静态方法.
