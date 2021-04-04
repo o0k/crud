@@ -1,5 +1,7 @@
 package SunFa;
 
+import org.apache.commons.lang3.builder.ToStringExclude;
+
 /**
  * @author 张澎_9970
  * @date 2021-04-03 21:40 星期六
@@ -10,9 +12,29 @@ public class Algorithms {
     static int[] arr = {1, 8, 6, 2, 5, 4, 8, 3, 7};
 
     public static void main(String[] args) {
-        System.out.println("算法");
-        int i = maxArea(arr);
-        System.out.println(i);
+        Algorithms algorithms = new Algorithms();
+
+        algorithms.climbStairs(10);
+
+    }
+
+    /**
+     * 最近重复子问题
+     * 1. 1 + 1 + 1
+     * 2. 1 + 2
+     * 3. 2 + 1
+     *
+     * @param n
+     * @return
+     */
+    public int climbStairs(int n) {
+        int p = 0, q = 0, r = 1;
+        for (int i = 1; i <= n; ++i) {
+            p = q;
+            q = r;
+            r = p + q;
+        }
+        return r;
     }
 
     /**
