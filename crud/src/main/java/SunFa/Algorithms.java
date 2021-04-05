@@ -1,8 +1,9 @@
 package SunFa;
 
-import org.apache.commons.lang3.builder.ToStringExclude;
-
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
 
 /**
  * @author 张澎_9970
@@ -17,8 +18,11 @@ public class Algorithms {
     public static void main(String[] args) {
         Algorithms algorithms = new Algorithms();
 
-        int[] ints = algorithms.twoSum(arr, 10);
-        System.out.println(Arrays.toString(ints));
+        // ListNode listNode = algorithms.reverseList(null);
+        // System.out.println(listNode.toString());
+
+        show(algorithms.generateListNode());
+
 
     }
 
@@ -43,25 +47,89 @@ public class Algorithms {
      * 15.
      * 三数之和
      */
+    public List<List<Integer>> threeSum(int[] nums) {
+        nums = new int[]{-1, 0, 1, 2, -1, -4};
+        Arrays.sort(nums);
+        List<List<Integer>> res = new ArrayList<>();
+        for (int k = 0; k < nums.length - 2; k++) {
+            if (nums[k] > 0) {
+                break;
+            }
+            if (k > 0 && nums[k] == nums[k - 1]) {
+                continue;
+            }
+            int i = k + 1, j = nums.length - 1;
+            while (i < j) {
+                int sum = nums[k] + nums[i] + nums[j];
+                if (sum < 0) {
+                    while (i < j && nums[i] == nums[++i]) {
+                        ;
+                    }
+                } else if (sum > 0) {
+                    while (i < j && nums[j] == nums[--j]) {
+                        ;
+                    }
+                } else {
+                    res.add(new ArrayList<>(Arrays.asList(nums[k], nums[i], nums[j])));
+                    while (i < j && nums[i] == nums[++i]) {
+                        ;
+                    }
+                    while (i < j && nums[j] == nums[--j]) {
+                        ;
+                    }
+                }
+            }
+        }
+        return res;
+    }
 
+    /**
+     * 206
+     * 反转链表
+     * 1.暴力
+     * 2.快慢指针
+     */
+    public boolean hasCycle(ListNode head) {
 
+        HashSet<ListNode> nodesSeen = new HashSet<>();
+        while (head != null) {
+            if (nodesSeen.contains(head)) {
+                return true;
+            } else {
+                nodesSeen.add(head);
+            }
+            head = head.next;
+        }
+        return false;
+    }
 
-
+    public ListNode reverseList(ListNode head) {
+        head = generateListNode();
+        ListNode prev = null;
+        ListNode curr = head;
+        while (curr != null) {
+            ListNode next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        return prev;
+    }
 
     /**
      * 最近重复子问题
      * 1. 1 + 1 + 1
      * 2. 1 + 2
      * 3. 2 + 1
-     *
+     * <p>
      * 核心问题: 你来到这个台阶的方法, 从前面一个台阶, 或者从前面2个台阶.
      * 解题: 只要最后的三个值:
-     *      result = f1 + f2
-     *      f1 = f2
-     *      f2 = result
-     *
-     *      1.暴力
-     *      2.最简单的情况怎么解决
+     * result = f1 + f2
+     * f1 = f2
+     * f2 = result
+     * <p>
+     * 1.暴力
+     * 2.最简单的情况怎么解决
      *
      * @param n
      * @return
@@ -98,4 +166,36 @@ public class Algorithms {
         }
         return ans;
     }
+
+    /**
+     * create listNode
+     */
+    private ListNode generateListNode() {
+        ListNode head = new ListNode(1);
+        ListNode node2 = new ListNode(2);
+        head.next = node2;
+        ListNode node3 = new ListNode(3);
+        node2.next = node3;
+        ListNode node4 = new ListNode(4);
+        node3.next = node4;
+        ListNode node5 = new ListNode(5);
+        node4.next = node5;
+        return head;
+    }
+
+    public static void show(ListNode head) {
+        if (head == null) {
+            System.out.println("EMPTY LIST!");
+            return;
+        }
+        ListNode currNode = head;
+        while (currNode.next != null) {
+            System.out.print(currNode.val);
+            System.out.print("->");
+            currNode = currNode.next;
+        }
+        System.out.print(currNode.val);
+        System.out.println();
+    }
+
 }
