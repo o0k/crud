@@ -22,7 +22,6 @@ public class Algorithms4 {
     }
     // dequeue
     // 最近相关性, 栈
-    // 最近相关性, 栈
 
     private static final Map<Character, Character> map = new HashMap<Character, Character>(4) {{
         put('{', '}');
