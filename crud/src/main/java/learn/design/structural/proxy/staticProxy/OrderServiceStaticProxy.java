@@ -1,6 +1,5 @@
 package learn.design.structural.proxy.staticProxy;
 
-import cn.o0k.service.O0kService;
 import learn.design.structural.proxy.Order;
 import learn.design.structural.proxy.OrderService;
 import learn.design.structural.proxy.OrderServiceImpl;
@@ -32,9 +31,12 @@ public class OrderServiceStaticProxy {
          * 静态代理, 增强了service的实现, 把DB切到 DbRouter这个DB上
          */
         System.out.println("静态代理分配到 ["+ dbRouter + "] 处理数据.");
+
         // todo 设置 DataSource
         DataSourceContextHolder.setDBType(String.valueOf(dbRouter));
-
+/**
+ * 根据userId的不同
+ */
         afterMethod();
         return orderService.saveOrder(order);
     }

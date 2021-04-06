@@ -6,19 +6,15 @@ package learn.design.structural.proxy;
  * @desc:
  */
 public class OrderServiceImpl implements OrderService{
-
+    /**
+     *
+     */
     private OrderDao orderDao;
 
     @Override
     public int saveOrder(Order order) {
-        OrderDao orderDao = new OrderDao() {
-            @Override
-            public int insert(Order order) {
-                return 0;
-            }
-        };
-        int insert = this.orderDao.insert(order);
+        orderDao = new OrderDaoImpl();
         System.out.println("添加Order...");
-        return insert;
+        return this.orderDao.insert(order);
     }
 }
