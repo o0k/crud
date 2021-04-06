@@ -9,13 +9,15 @@ public class OrderServiceImpl implements OrderService{
 
     private OrderDao orderDao;
 
-    public void setOrderDao(OrderDao orderDao) {
-        this.orderDao = orderDao;
-    }
-
     @Override
     public int saveOrder(Order order) {
-        int insert = orderDao.insert(order);
+        OrderDao orderDao = new OrderDao() {
+            @Override
+            public int insert(Order order) {
+                return 0;
+            }
+        };
+        int insert = this.orderDao.insert(order);
         System.out.println("添加Order...");
         return insert;
     }

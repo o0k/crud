@@ -7,25 +7,33 @@ package SunFa;
  */
 public class SunFa {
 
+    static int num = 10;
+    static int[] a = {1, 12, 3, 4, 5, 6, 7, 4, 9};
+
+
     public static void main(String[] args) {
-        _11();
+        maxArea();
     }
 
-    public static void _11() {
-        // test commit 2021年4月3日
-        int count = 0;
-        int[] a = {1, 2, 3, 4, 5, 6, 7};
-        String str = "";
-
-        for (int i = 0; i < a.length; i++) {
-            for (int j = i + 1; j < a.length; j++) {
-                for (int k = i + j + 1; k < a.length; k++) {
-                    str = a[i] + " × " + a[j] + " × " + a[k];
-                    System.out.println(str);
-                    count++;
-                }
+    public static void _141() {
+        for (int i = 0; i < num; i++) {
+            for (int j = 0; j < i + 1; j++) {
+                System.out.print("*");
             }
+            System.out.println();
         }
-        System.out.println(count);
     }
+
+    /**
+     * 盛水最多的容器
+     */
+    public static void maxArea() {
+
+        int max = 0;
+        int len = a.length;
+        for (int i = 0; i < a.length; i++) {
+        }
+        System.out.println(max);
+    }
+
 }
