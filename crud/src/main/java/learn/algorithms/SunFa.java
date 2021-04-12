@@ -1,4 +1,4 @@
-package SunFa;
+package learn.algorithms;
 
 /**
  * @author 张澎_9970

@@ -1,4 +1,4 @@
-package SunFa;
+package learn.algorithms;
 
 import java.util.HashMap;
 import java.util.LinkedList;

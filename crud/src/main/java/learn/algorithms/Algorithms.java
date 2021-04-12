@@ -1,4 +1,4 @@
-package SunFa;
+package learn.algorithms;
 
 import java.util.ArrayList;
 import java.util.Arrays;
