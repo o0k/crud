@@ -151,6 +151,7 @@ public class Algorithms {
      * @return int
      */
     public static int maxArea(int[] arr) {
+
         /** 前柱子 和 后柱子 下标 */
         int l = 0, r = arr.length - 1;
         /** 大面积 */
