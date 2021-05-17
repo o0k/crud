@@ -23,5 +23,7 @@ public class _283_MoveZero {
         }
 
         System.out.println(Arrays.asList(newArr));
+        
+
     }
 }
