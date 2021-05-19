@@ -21,9 +21,5 @@ public class _283_MoveZero {
                 newArr[i - zeroCount] = arr[i];
             }
         }
-
-        System.out.println(Arrays.asList(newArr));
-        
-
     }
 }
