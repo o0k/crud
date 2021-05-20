@@ -1,6 +1,8 @@
 package learn.regex;
 
 
+import learn.his.StorageTypeVO;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -20,12 +22,9 @@ public class Damo {
         while (matcher.find()) {
             String group = matcher.group();
             String group0 = matcher.group(0);
-            String group1 = matcher.group(1);
-            String group2 = matcher.group(2);
-            System.out.printf("group: " + group);
-            System.out.printf("group0: " + group0);
-            System.out.printf("group1: " + group1);
-            System.out.printf("group2: " + group2);
+
+            String aa =  StorageTypeVO.PatientType.OUTP_PATIENT.toString();
+            System.out.println(aa);
         }
     }
 }
