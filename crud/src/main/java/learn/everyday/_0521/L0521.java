@@ -39,5 +39,9 @@ public class L0521 {
 
         String zhp = "abcd";
 
+        final byte[] bytes = zhp.getBytes(StandardCharsets.UTF_8);
+
+
+
     }
 }
