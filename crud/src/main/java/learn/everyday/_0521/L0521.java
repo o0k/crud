@@ -4,6 +4,7 @@ import lombok.val;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -37,9 +38,14 @@ public class L0521 {
 
         val c1 = c;
 
+        System.out.println("c1:" + c1);
+
         String zhp = "abcd";
 
         final byte[] bytes = zhp.getBytes(StandardCharsets.UTF_8);
+
+        final String s = Arrays.toString(bytes);
+        System.out.println(s);
 
 
 
