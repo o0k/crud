@@ -9,10 +9,10 @@ server:
       init-parameters:
         development: true
 jdbc:
-  url: jdbc:mysql://localhost:3306/mybatis
+  url: jdbc:mysql://119.45.157.172:3306/hispro_lis?useSSL=false
   driverClassName: com.mysql.jdbc.Driver
   username: root
-  password: root
+  password: zhp!43435438
 mybatis:
   mapper-locations: classpath*:cn.o0k.mapper/**/*.xml
   type-aliases-package: cn.o0k.pojo

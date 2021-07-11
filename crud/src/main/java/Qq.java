@@ -1,3 +1,4 @@
+import cn.o0k.controller.TxyController;
 import learn.algorithms.MoveZero;
 
 /**
@@ -7,6 +8,7 @@ import learn.algorithms.MoveZero;
  */
 public class Qq {
     MoveZero moveZero;
+    TxyController txyController;
 
 
     public static void main(String[] args) {
