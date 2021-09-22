@@ -20,6 +20,7 @@ public class TxyServiceImpl implements TxyService {
 
     @Override
     public List<Stock> queryStocks() {
-        return txyDao.queryStocks();
+        // return txyDao.queryStocks();\
+        return null;
     }
 }

@@ -1,7 +1,7 @@
 package cn.o0k.controller;
 
 import cn.o0k.pojo.User;
-import cn.o0k.service.O0kService;
+import cn.o0k.service.impl.O0kService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

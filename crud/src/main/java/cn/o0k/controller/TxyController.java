@@ -1,6 +1,8 @@
 package cn.o0k.controller;
 
+import cn.o0k.mapper.TxyMapper;
 import cn.o0k.pojo.Stock;
+import cn.o0k.pojo.ZhpTable;
 import cn.o0k.service.TxyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,8 +20,12 @@ public class TxyController {
     @Autowired
     private TxyService txyService;
 
+    @Autowired
+    private TxyMapper txyMapper;
+
     @GetMapping("txy")
-    public List<Stock> queryStocks(){
-        return txyService.queryStocks();
+    public List<ZhpTable> queryStocks(){
+
+        return txyMapper.zhpTable();
     }
 }

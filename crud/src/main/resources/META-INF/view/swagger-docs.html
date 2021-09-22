@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swagger Instructions</title>
+    <style type="text/css">
+        #container {
+            width: 80%;
+            margin: auto;
+        }
+
+        .doc-codes {
+            line-height: 30px;
+            background-color: whitesmoke;
+        }
+
+        .anno {
+            color: darkgray;
+            font-size: 16px;
+        }
+
+        .cont {
+            color: dodgerblue;
+            font-size: 16px;
+        }
+
+        .cont2 {
+            color: goldenrod;
+            font-size: 16px;
+        }
+
+        #swagger-header {
+            text-align: -webkit-left;
+            background-color: gray;
+            color: silver;
+            width: 100%;
+            font-size: 50px;
+            padding-left: 50px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            line-height: 60px;
+        }
+
+        #swagger-foot {
+            text-align: center;
+            background-color: gray;
+            color: silver;
+            width: 100%;
+            font-size: 12px;
+            line-height: 16px;
+            margin-top: 12px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        a {
+            color: silver;
+            text-decoration: none;
+        }
+
+        a:active, a:hover {
+            outline: 0;
+        }
+
+        a:focus, a:hover {
+            color: darkgray;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div id="container">
+    <div id="swagger-header">万达信息</div>
+    <div id="swagger-body">
+        <h1 style="text-align: center">Swagger配置说明</h1>
+        <h3>1、spring-swagger 配置:</h3>
+        <p>1) 配置目的: 对指定的接口进行文档生成, 同时也可以配置生成全部文档;</p>
+        <p>2) 请在 classpath:/application.yml 文件中配置${swagger.ui.basePackages}的值,
+            该值为需要生成接口文档所在的包名, 且可以填写多个包名, 用逗号分割多个包名;</p>
+        <p>3) 也可以配置${swagger.ui.urlPeriods}的值, 该值为@requestMapping中的path路径的片段;</p>
+        <div class="doc-codes">
+            <div class="anno">## Swagger配置</div>
+            <div class="cont">swagger: <br>
+                &emsp;doc:
+            </div>
+            <div class="anno">&emsp;&emsp;## 是否开启swagger</div>
+            <div class="cont">&emsp;&emsp;enable: true</div>
+            <div class="anno">&emsp;&emsp;## 填写扫描包的路径, 可以填写多个值，用英文逗号分隔, 比如: a,b,c<br>
+                &emsp;&emsp;## 如不填写，则扫描所有包内的接口
+            </div>
+            <div class="cont">&emsp;&emsp;basePackages: com.wonders.project.blood.doctorworkstation,
+                com.wonders.project.blood.basedict.controller
+            </div>
+            <div class="anno">&emsp;&emsp;## requestMapping 中的 path, 可以写全路径, 也可以写路径片段; 可以填写多个值, 用法同
+                ${swagger.doc.basePackages}<br>
+                &emsp;&emsp;## 如不填写，则匹配所有的path
+            </div>
+            <div class="cont">&emsp;&emsp;urlPeriods: getReportInfo, /quaryBloodCompInfo/{aplId}</div>
+        </div>
+        <h3>2、swagger注解的使用</h3>
+        <div class="doc-codes">
+            <div class="anno">(1) @Api, 该注解作用于controller类上, 用于接口文档分类, 比如:</div>
+            <div class="cont2">&emsp;@Api(tags = "用血申请")</div>
+            <div class="anno">(2) @ApiOperation, 作用于controller的requestMapping的方法上, 表示具体的接口, 比如:</div>
+            <div class="cont2">&emsp;@ApiOperation("用血申请-必检项目/相关项目")</div>
+            <div class="anno">(3) @ApiModel, 作用于入参和返回值的对象的类名称上, 表示接口输入输出的参数, 比如:</div>
+            <div class="anno">&emsp;注意: 该注解内填写的内容不能包含"/", 否则影响接口文档的生成, 错误写法为@ApiModel("必检项目/关注项目Vo")</div>
+            <div class="cont2">&emsp;@ApiModel("必检项目-关注项目Vo")</div>
+            <div class="anno">(4) @ApiModelProperty, 作用于参数的属性上, 表示参数的字段, 比如:</div>
+            <div class="cont2">&emsp;@ApiModelProperty("英文缩写")</div>
+        </div>
+        <h3>3、Yapi接口导入</h3>
+        <div class="doc-codes">
+            <div>点击"生成Swagger文件"按钮，将文件保存到本地，然后拖入Yapi上传区域即可
+            </div>
+        </div>
+    </div>
+    <br>
+    <div id="swagger-foot">
+        <ul>
+            <li class="wondersgroup">
+                <a aria-current="page" href="http://www.wondersgroup.com">万达信息</a>
+                <a href="http://www.fugao.com" target="_blank" rel="noopener noreferrer">上海复高</a>
+                <a href="http://www.tomtawsoft.com" target="_blank" rel="noopener noreferrer">宁波金唐</a>
+                <a href="http://www.eshimin.com" target="_blank" rel="noopener noreferrer">市民信箱</a>
+            </li>
+            <li>
+                <span class="copyright">© 2020 WONDERS INFORMATION CO., LTD. ALL RIGHTS RESERVED. 万达信息股份有限公司版权所有</span>
+            </li>
+            <li>
+                <span class="icp"><a title="沪ICP备&#10; 05002296 号" href="http://www.beian.miit.gov.cn/" target="_blank">[沪ICP备 05002296 号]</a></span>
+                <span class="icp"><a title="沪公网安备 31011202002352 号"
+                                     href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011202002352"
+                                     target="_blank">[沪公网安备 31011202002352 号]</a></span>
+                <span class="sgs"><a title="上海工商营业执照备案信息公开"
+                                     href="http://wap.scjgj.sh.gov.cn/businessCheck/verifKey.do?showType=extShow&amp;serial=9031000020160314171059000000188434-SAIC_SHOW_310000-20090319093240118383&amp;signData=MEUCIQD0LGo7+wb0vyyfQMuZdMndlaTAdEouy9CVM5b0qTQ9KQIgP42xN+h2sDbBEo3g2Vlo7rYh71vTy4hjsrFO/c0N0iM="
+                                     target="_blank">[工商营业执照备案]</a></span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+
+</html>

@@ -33,7 +33,9 @@
 </head>
 <body>
 <h2>WEB-INF 外面的</h2>
-<input type="button" value="发送异步请求" onclick="fun();">
-<input>
+<%--<input type="button" value="发送异步请求" onclick="fun();">--%>
+<from action="test.jsp" method="get">
+    <input type="submit" value="TXY">
+</from>
 </body>
 </html>

@@ -1,6 +1,7 @@
 package cn.o0k.mapper;
 
 import cn.o0k.pojo.Stock;
+import cn.o0k.pojo.ZhpTable;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -14,6 +15,10 @@ import java.util.List;
 @Mapper
 @Repository
 public interface TxyMapper {
+    /**
+     * dfdsf
+     * @return
+     */
+    List<ZhpTable> zhpTable();
 
-    List<Stock> queryStocks();
 }

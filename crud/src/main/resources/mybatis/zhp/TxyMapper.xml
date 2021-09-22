@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.o0k.mapper.TxyMapper" >
+
+  <resultMap type="cn.o0k.pojo.ZhpTable" id="zhpTableResultMap">
+    <result property="column1" column="column_1"/>
+  </resultMap>
+
+  <select id="zhpTable" resultMap="zhpTableResultMap">
+    select * from zhp_table
+  </select>
+</mapper>
