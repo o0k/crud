@@ -1,0 +1,67 @@
+<!--
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+    &lt;!&ndash; 定时器（发送票据开具信息给交款人） &ndash;&gt;
+    &lt;!&ndash; 要调用的工作类 /HebNT/src/heb/nt/service/web/mailQuartz.java &ndash;&gt;
+    <bean id="MailQuartz" class="heb.nt.service.web.MailQuartz"></bean>
+    &lt;!&ndash; 定义调用对象和调用对象的方法 &ndash;&gt;
+    <bean id="jobtask"
+          class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        &lt;!&ndash; 调用的类 &ndash;&gt;
+        <property name="targetObject">
+            <ref bean="MailQuartz"/>
+        </property>
+        &lt;!&ndash; 调用类中的方法 &ndash;&gt;
+        <property name="targetMethod">
+            <value>Quartz</value>
+        </property>
+    </bean>
+
+    <bean id="jobtask2"
+          class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        &lt;!&ndash; 调用的类 &ndash;&gt;
+        <property name="targetObject">
+            <ref bean="MailQuartz"/>
+        </property>
+        &lt;!&ndash; 调用类中的方法 &ndash;&gt;
+        <property name="targetMethod">
+            <value>deleteOldEInvoices</value>
+        </property>
+    </bean>
+    &lt;!&ndash; 定义触发时间&ndash;&gt;
+    <bean id="doTime" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <ref bean="jobtask"/>
+        </property>
+        &lt;!&ndash; cron表达式 &ndash;&gt;
+        <property name="cronExpression">
+            &lt;!&ndash; 每三分钟执行一次&ndash;&gt;
+            <value>0 0/5 * * * ? *</value>
+        </property>
+    </bean>
+    &lt;!&ndash; 定义触发时间&ndash;&gt;
+    <bean id="doTime2" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <ref bean="jobtask2"/>
+        </property>
+        &lt;!&ndash; cron表达式 &ndash;&gt;
+        <property name="cronExpression">
+            &lt;!&ndash; 每年每月的一号0点0分0秒执行一次&ndash;&gt;
+            <value>0 0 0 1 * ? *</value>
+        </property>
+    </bean>
+    &lt;!&ndash; 总管理类 如果将lazy-init='false'那么容器启动就会执行调度程序 &ndash;&gt;
+    <bean id="startQuertz" lazy-init="false" autowire="no"
+          class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <ref bean="doTime"/>
+                <ref bean="doTime2"/>
+            </list>
+        </property>
+    </bean>
+
+</beans>-->
