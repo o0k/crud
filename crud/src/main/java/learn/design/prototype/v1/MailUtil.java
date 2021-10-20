@@ -20,6 +20,6 @@ public class MailUtil {
      * 保存邮件
      */
     public static void saveOriginMailRecord(Mail mail) {
-        System.out.println("存储OriginMail记录, originMail:" + mail.getContent());
+        System.out.println("【SAVE】: 存储OriginMail记录, originMail:" + mail.getContent());
     }
 }
