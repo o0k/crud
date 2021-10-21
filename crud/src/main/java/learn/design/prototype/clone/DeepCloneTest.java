@@ -17,7 +17,7 @@ public class DeepCloneTest {
         /**
          * 1970年 1970-01-01 08:00:00 000
          */
-        Date birthday = new Date();
+        Date birthday = new Date(0L);
 
         DeepClonePig pig = new DeepClonePig("佩奇", birthday);
         DeepClonePig dcp = (DeepClonePig)pig.clone();

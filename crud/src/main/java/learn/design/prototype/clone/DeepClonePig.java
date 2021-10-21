@@ -45,6 +45,11 @@ public class DeepClonePig implements Cloneable{
                 '}' + super.toString();
     }
 
+    /**
+     * 深克隆
+     * @return
+     * @throws CloneNotSupportedException
+     */
     @Override
     protected Object clone() throws CloneNotSupportedException {
         DeepClonePig deepClonePig = (DeepClonePig)super.clone();

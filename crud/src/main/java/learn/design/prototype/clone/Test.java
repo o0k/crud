@@ -13,7 +13,7 @@ import java.util.Date;
  */
 public class Test {
     public static void main(String[] args) throws CloneNotSupportedException {
-        // shallowClone();
+        shallowClone();
 
 
 
@@ -30,6 +30,7 @@ public class Test {
 
         pig.getBirthday().setTime(66666666666666666L);
         System.out.println(pig);
+        // 克隆猪的日期也变了。
         System.out.println(clonePig);
     }
 }
